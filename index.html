@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Tech Jenga</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="flex-container-row">
+            <div class="logoLeft">
+                <a href=""><img src="igdtuw.png" alt="IGDTUW"></a>
+            </div>
+            <div class="heading">
+                Tech Jenga
+            </div>
+            <div class="logoRight">
+                <a href=""><img src="innervelogo.jpg" alt="INNERVE"></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="mainBox">
+            <div class="box box1" onclick="myModal(1)">
+                <div class="title">
+                    <p>Round 1</p>
+                </div>
+
+            </div>
+            <div class="box zoomIn box2" onclick="myModal(2)">
+                <div class="title">
+                    <p>Round 2</p>
+                </div>
+
+            </div>
+            <div class="box box3" onclick="myModal(3)">
+                <div class="title">
+                    <p>Round 3</p>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".box1").hover(function() {
+                    $(".box2").removeClass("zoomIn");
+                }, function() {
+                    $(".box2").addClass("zoomIn");
+                });
+                $(".box3").hover(function() {
+                    $(".box2").removeClass("zoomIn");
+                }, function() {
+                    $(".box2").addClass("zoomIn");
+                });
+            });
+        </script>
+
+
+        <!-- modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form action="output.html" id="myFormId">
+                    <input type="hidden" name="round" id="round">
+                    <input type="radio" name="color" value="red" id="red">&nbsp;Red <br>
+                    <input type="radio" name="color" value="green" id="green">&nbsp;Green <br>
+                    <input type="radio" name="color" value="white" id="white">&nbsp;White <br>
+                    <input type="submit" name="submit" value="submit">
+                </form>
+            </div>
+
+        </div>
+        <script>
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+
+            function myModal(n) {
+                document.getElementById("round").id = n;
+                modal.style.display = "block";
+            }
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    </div>
+
+
+</body>
+
+</html>

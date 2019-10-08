@@ -16,10 +16,16 @@
         var round1answ = [];
         var round3ques = [];
         var round3answ = [];
-        alert('hello');
-        $(document).ready(function() {
-
-        });
+        var x = document.getElementById("myFormId");
+        var text = "";
+        var i;
+        for (i = 0; i < x.length; i++) {
+            text += x.elements[i].value + "<br>";
+        }
+        alert(text);
+        var para = document.createElement("p");
+        var node = document.createTextNode(text);
+        para.appendChild(node);
     </script>
 </body>
 

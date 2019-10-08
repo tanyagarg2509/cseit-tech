@@ -74,8 +74,9 @@
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <form action="output.html" id="myFormId">
-                    <input type="hidden" name="round" id="round">
+                <h1 id="modalHeading" style="text-align: center;"></h1>
+                <form action="output.html" name="myFormId">
+                    <input type="hidden" name="round" id="round" value="hidden">
                     <input type="radio" name="color" value="red" id="red">&nbsp;Red <br>
                     <input type="radio" name="color" value="green" id="green">&nbsp;Green <br>
                     <input type="radio" name="color" value="white" id="white">&nbsp;White <br>
@@ -90,7 +91,10 @@
 
             function myModal(n) {
                 document.getElementById("round").id = n;
+                var round = document.forms.myFormId.round.id;
+                document.getElementById("modalHeading").innerHTML = "Round " + round;
                 modal.style.display = "block";
+
             }
             span.onclick = function() {
                 modal.style.display = "none";

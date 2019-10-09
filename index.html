@@ -20,15 +20,17 @@
     <header>
         <div class="flex-container-row">
             <div class="logoLeft">
-                <a href=""><img src="igdtuw.png" alt="IGDTUW"></a>
+                <a href=""><img src="igdtuw yellow.jpg" alt="IGDTUW"></a>
             </div>
             <div class="heading">
-                Tech Jenga
+                TECH JENGA
             </div>
             <div class="logoRight">
-                <a href=""><img src="innervelogo.jpg" alt="INNERVE"></a>
+                <a href=""><img src="innerve yellow.jpg" alt="INNERVE"></a>
             </div>
         </div>
+
+
     </header>
 
     <div class="container">
@@ -75,12 +77,12 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h1 id="modalHeading" style="text-align: center;"></h1>
-                <form action="output.html" name="myFormId">
-                    <input type="hidden" name="round" id="round" value="hidden">
-                    <input type="radio" name="color" value="red" id="red">&nbsp;Red <br>
-                    <input type="radio" name="color" value="green" id="green">&nbsp;Green <br>
-                    <input type="radio" name="color" value="white" id="white">&nbsp;White <br>
-                    <input type="submit" name="submit" value="submit">
+                <form action="" name="myFormId" method="POST">
+                    <input type="hidden" name="round" id="round" value="">
+
+                    <input type="submit" name="red" id="error" value=" RED " formaction=""><br>
+                    <input type="submit" name="white" id="coding" value=" WHITE " formaction=""><br>
+                    <input type="submit" name="green" id="output" value=" GREEN " formaction="output.php"><br>
                 </form>
             </div>
 
@@ -90,8 +92,8 @@
             var span = document.getElementsByClassName("close")[0];
 
             function myModal(n) {
-                document.getElementById("round").id = n;
-                var round = document.forms.myFormId.round.id;
+                document.getElementById("round").value = n;
+                var round = document.forms.myFormId.round.value;
                 document.getElementById("modalHeading").innerHTML = "Round " + round;
                 modal.style.display = "block";
 

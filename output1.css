@@ -1,0 +1,31 @@
+body {
+    background: black;
+}
+
+header {
+    background: rgb(241, 179, 20);
+}
+
+.heading {
+    flex-grow: 4;
+    line-height: 150px;
+    text-align: center;
+    font-size: 85px;
+    font-family: 'Jokerman';
+}
+
+.container {
+    background: rgb(110, 17, 17);
+}
+
+.question {
+    font-size: 40px;
+    color: white;
+    font-family: 'Monotype Corsiva';
+}
+
+.question p {
+    text-align: center;
+    top: 35%;
+    width: 100%;
+}

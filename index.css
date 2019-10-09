@@ -4,6 +4,10 @@
     background-size: cover;
 } */
 
+body {
+    background: black;
+}
+
 .flex-container-row {
     display: flex;
     width: 100%;
@@ -14,6 +18,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    background: rgb(241, 179, 20);
 }
 
 .logoLeft {
@@ -36,7 +41,8 @@
     flex-grow: 4;
     line-height: 150px;
     text-align: center;
-    font-size: 50px;
+    font-size: 85px;
+    font-family: 'Starburst';
 }
 
 .logoRight {
@@ -51,23 +57,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .title {
     position: relative;
     height: 100%;
+    font-size: 40px;
+    color: white;
 }
 
 .title p {
     text-align: center;
-    top: 45%;
+    top: 35%;
     width: 100%;
     position: absolute;
 }
 
 .box {
-    background-color: lightblue;
+    background-color: rgb(110, 17, 17);
     transition: transform .500s;
     height: 200px;
     flex-basis: 1;
@@ -101,7 +109,8 @@
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #2f137a;
+    color: chartreuse;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -121,4 +130,25 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+#error {
+    background: rgb(180, 20, 20);
+    color: white;
+    margin-top: 30px;
+    margin-left: 85px;
+}
+
+#coding {
+    background: white;
+    color: black;
+    margin-top: 30px;
+    margin-left: 85px;
+}
+
+#output {
+    background: green;
+    color: white;
+    margin-top: 30px;
+    margin-left: 85px;
 }

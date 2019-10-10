@@ -8,47 +8,23 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-// else echo 'connected';
-$round=$_POST['round'];
+ 
+// $round=$_POST['round'];
 $question="";
 $answer="";
 // echo $round;
-if($round==1)
-{
-$var=rand(0,5);
-echo $var;
-$sql = "select * from tech_jenga where type ='easy' and id='$var'";
-$result=mysqli_query($conn, $sql);
-$resultCheck=mysqli_num_rows($result);
-if ($resultCheck > 0) {
-	while($row = $result->fetch_assoc()) {
-	$question=$row['question'];
-	$answer=$row['answer'];}
-}
-}
-else if($round==2)
-{
-	$var=rand(6,12);
-	$sql = "select * from tech_jenga where type ='medium' and id='$var'";
-$result=mysqli_query($conn, $sql);
-$resultCheck=mysqli_num_rows($result);
-if ($resultCheck > 0) {
-	while($row = $result->fetch_assoc()) {
-	$question=$row['question'];
-	$answer=$row['answer'];
-}}
 
-}
-else{
-$var=rand(12,20);
-$sql = "select * from tech_jenga where type ='difficult' and id='$var'";
+// $var=rand(1,20);
+$sql = "select * from output_question";
 $result=mysqli_query($conn, $sql);
+
 $resultCheck=mysqli_num_rows($result);
 if ($resultCheck > 0) {
-	while($row = $result->fetch_assoc()) {
+	while($row = mysqli_fetch_assoc($result)) {
 	$question=$row['question'];
 	$answer=$row['answer'];
-}}
+	
+}
 
 }
 ?>
@@ -59,7 +35,9 @@ if ($resultCheck > 0) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>OUTPUT QUESTIONS</title>
-	<style>body {
+	<style>
+	
+body {
     background: black;
 }
 
@@ -68,27 +46,30 @@ header {
 }
 
 .heading {
-    flex-grow: 4;
+    
     line-height: 150px;
     text-align: center;
     font-size: 85px;
     font-family: 'Jokerman';
 }
 
-.container {
+.box1 {
     background: rgb(110, 17, 17);
 }
 
 .question {
-    font-size: 40px;
-    color: white;
+    font-size:14px;
+	color: white;
+	width:400px;
+	height:100%;
+	overflow: auto;
     font-family: 'Monotype Corsiva';
 }
 
 .question p {
-    text-align: center;
-    top: 35%;
-    width: 100%;
+   
+    /* top: 35%; */
+   
 }
 </style>
 </head>
@@ -99,7 +80,7 @@ header {
 				{
 					$output=$_POST['answer_by_user'];
 					if($answer==$output){
-						
+						echo 'alert(successfull)';
 					}
 					
 				}
@@ -115,7 +96,7 @@ header {
     <div class="container">
         <div class="box1">
             <div class="question">
-                <p><b> <?php echo $question ;?> </b> </p>
+                Question :<?php echo $question ;?>
 			</div>
 			<div class="output">
 				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" name="output" method="POST">

@@ -2,6 +2,21 @@ body {
     background: black;
 }
 
+@font-face {
+    font-family: "starburst";
+    src: url("Starburst.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "jokerman";
+    src: url("Jokerman-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MTCORSOVA";
+    src: url("MTCORSVA.TTF") format("truetype");
+}
+
 header {
     background: rgb(241, 179, 20);
 }
@@ -11,7 +26,7 @@ header {
     line-height: 150px;
     text-align: center;
     font-size: 85px;
-    font-family: 'Jokerman';
+    font-family: 'jokerman';
 }
 
 .container {
@@ -30,7 +45,7 @@ header {
     width: 700px;
     margin: 50px;
     padding: 20px;
-    font-family: 'Monotype Corsiva';
+    font-family: "MTCORSOVA", 'Monotype Corsiva';
     border: 2px solid white;
     border-radius: 15px;
     transition: transform 1s;
@@ -49,7 +64,7 @@ header {
     width: 100%;
 }
 
-#answer_by_user {
+.answer_by_user {
     width: 500px;
     margin-left: 50px;
     line-height: 40px;

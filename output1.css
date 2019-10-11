@@ -18,14 +18,50 @@ header {
     background: rgb(110, 17, 17);
 }
 
+.box1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .question {
-    font-size: 40px;
+    font-size: 25px;
     color: white;
+    width: 700px;
+    margin: 50px;
+    padding: 20px;
     font-family: 'Monotype Corsiva';
+    border: 2px solid white;
+    border-radius: 15px;
+    transition: transform 1s;
+    display: none;
+}
+
+.question:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 10px rgb(241, 179, 20);
 }
 
 .question p {
-    text-align: center;
-    top: 35%;
+    /* margin: 20px;
+    padding: 20px; */
+    text-align: space-around;
     width: 100%;
 }
+
+#answer_by_user {
+    width: 500px;
+    margin-left: 50px;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+#submit {
+    line-height: 40px;
+    font-size: 25px;
+    background-color: rgb(241, 179, 20);
+    color: rgb(110, 17, 17);
+    cursor: pointer;
+}
+
+#submit:hover {}

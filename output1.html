@@ -6,40 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="output1.css">
-    <title>Document</title>
-    <style>
-        body {
-            background: black;
-        }
-        
-        header {
-            background: rgb(241, 179, 20);
-        }
-        
-        .heading {
-            flex-grow: 4;
-            line-height: 150px;
-            text-align: center;
-            font-size: 85px;
-            font-family: 'Jokerman';
-        }
-        
-        .container {
-            background: rgb(110, 17, 17);
-        }
-        
-        .question {
-            font-size: 40px;
-            color: white;
-            font-family: 'Monotype Corsiva';
-        }
-        
-        .question p {
-            text-align: center;
-            top: 35%;
-            width: 100%;
-        }
-    </style>
+    <title>OUTPUT</title>
 </head>
 
 <body>
@@ -52,65 +19,131 @@
 
     <div class="container">
         <div class="box1">
-            <div class="question">
-                <p><b>Q1.</b> </p>
+            <div class="question" id="1">
+                <p><b>Ques.</b> How many ways are there to place a black and a white knight on an N * M chessboard such that they do not attack each other? The knights have to be placed on different squares. A knight can move two squares horizontally and
+                    one square vertically (L shaped), or two squares vertically and one square horizontally (L shaped). The knights attack each other if one can reach the other in one move. Find output for N=2, M=3. (Output=26)</p>
+                <input type="text" placeholder="Enter Your Answer" id="answer_by_user">
+                <input type="button" id="submit" value="SUBMIT" onclick="check();">
             </div>
         </div>
 
         <div class="box1">
-            <div class="question">
-                <p><b>Q2.</b> </p>
+            <div class="question" id="2">
+                <p><b>Ques.</b> Jenny loves sweets so much. Now she is at a famous restaurant and wants to eat M pieces of a particular sweet. Cost of nth sweet can only be determined by the determinant of matrix of order n x n, where n = 1 to M. The (i,j)th
+                    term of matrix is given as: A[i][j]= minimum(i,j) *(-1)((i-1)*n + (j-1)). Matrix indexes starts with 1. The task is to find the cost of M sweets. find output for M=1. (Output=1)</p>
+                <input type="text" placeholder="Enter Your Answer" id="answer_by_user">
+                <input type="button" id="submit" value="SUBMIT" onclick="check();">
             </div>
         </div>
 
         <div class="box1">
-            <div class="question">
-                <p><b>Q3.</b> </p>
+            <div class="question" id="3">
+                <p><b>Ques.</b> Consider a big party where a log register for guest’s entry and exit times is maintained. Find the time at which there are maximum guests in the party. Note that entries in register are not in any order. Find maximum no. of
+                    guests and the time at which there are meximum guests for following input:- Entry array: 1 2 10 5 5, Output array: 4 5 12 9 12. (Output=3 5)</p>
+                <input type="text" placeholder="Enter Your Answer" id="answer_by_user">
+                <input type="button" id="submit" value="SUBMIT" onclick="check();">
             </div>
         </div>
 
         <div class="box1">
-            <div class="question">
-                <p><b>Q4.</b> </p>
+            <div class="question" id="4">
+                <p><b>Ques.</b> Pasha has been very sick. His platelets went way down. Being a paranoid person, he consulted N doctors about the optimal range in which Platelet Count should lie. The i-th doctor suggested that the Platelet count should be
+                    between li and ri, inclusive, to be called normal. Now, Pasha thinks that a Platelet count is Safe to have if at least Z Doctors recommend it. Pasha now asks Q Queries. In each query- he will give an integer P (the platelet count).
+                    Pasha wants to know if the entered Platelet count is safe to have or not. N=5; li and ri for 5 doctors: 1 10, 5 10, 7 12, 15 25, 20 25; Z=3; Q=4; 4 query platelets: 7, 5, 10, 16. Output Yes/No for each query patelest. (Output=Yes No;
+                    Yes; No)</p>
+                <input type="text" placeholder="Enter Your Answer" id="answer_by_user">
+                <input type="button" id="submit" value="SUBMIT" onclick="check();">
             </div>
         </div>
 
         <div class="box1">
-            <div class="question">
-                <p><b>Q5.</b> </p>
+            <div class="question" id="5">
+                <p><b>Ques.</b> Given an array containing N numbers. The task is to find the maximum sum bitonic subarray. A bitonic subarray is a subarray in which elements are first increasing and then decreasing. A strictly increasing or strictly decreasing
+                    subarray is also considered as bitonic subarray. You have to find the bitonic subarray with the maximum sum of its elements (output should be sum only). Find for given array: 5 3 9 2 7 6 4. (Output=19)</p>
+                <input type="text" placeholder="Enter Your Answer" id="answer_by_user">
+                <input type="button" id="submit" value="SUBMIT" onclick="check();">
+
             </div>
         </div>
 
         <div class="box1">
-            <div class="question">
-                <p><b>Q6.</b> </p>
+            <div class="question" id="6">
+                <p><b>Ques.</b> Given an array of size NN and two integers KK and SS, the special sum of a subarray is defined as follows: (Sum of all elements of the subarray) * (KK - pp * SS). Where pp = number of distinct prime factors of “product of
+                    all elements of the subarray”. Find the maximum special sum by considering all non-empty subarrays of the given array. Find output for NN=4, K=10, SS=2, Array: 14 2 7 15. (Output=138)</p>
+                <input type="text" placeholder="Enter Your Answer" id="answer_by_user">
+                <input type="button" id="submit" value="SUBMIT" onclick="check();">
             </div>
         </div>
 
         <div class="box1">
-            <div class="question">
-                <p><b>Q7.</b> </p>
+            <div class="question" id="7">
+                <p><b>Ques.</b> You are given a sequence of N powers of an integer k; let's denote the i-th of these powers by kAi. You should partition this sequence into two non-empty contiguous subsequences; each element of the original sequence should
+                    appear in exactly one of these subsequences. In addition, the product of (the sum of elements of the left subsequence) and (the sum of elements of the right subsequence) should be maximum possible. Find the smallest position at which
+                    you should split this sequence in such a way that this product is maximized. Find out put fot N=5, k=2, Sequence: 1 1 3 3 5. (Output=4)</p>
+                <input type="text" placeholder="Enter Your Answer" id="answer_by_user">
+                <input type="button" id="submit" value="SUBMIT" onclick="check();">
             </div>
         </div>
 
         <div class="box1">
-            <div class="question">
-                <p><b>Q8.</b> </p>
+            <div class="question" id="8">
+                <p><b>Ques.</b> For a permutation P = (p1, p2, ..., pN) of numbers [1, 2, ..., N], we define the function f(P) = max(p1, p2) + max(p2, p3) + ... + max(pN-1, pN). You are given N and an integer K. Find and report a permutation P of [1, 2,
+                    ..., N] such that f(P) = K, if such a permutation exists. Note f([1]) = 0. If a permutation satisfying the condition exists, output a single line containing N space-separated integers which denotes any such permutation. If no such
+                    permutation exists, output a single integer -1 instead. Find output for N=4, K=12. (Output=-1)</p>
+                <input type="text" placeholder="Enter Your Answer" id="answer_by_user">
+                <input type="button" id="submit" value="SUBMIT" onclick="check();">
             </div>
         </div>
 
         <div class="box1">
-            <div class="question">
-                <p><b>Q9.</b> </p>
+            <div class="question" id="9">
+                <p><b>Ques.</b> In a Circular City, there are n houses, numbered from 1 to n and arranged in 1,2,…,n,1,2,… Chef needs to deliver packages to m (m
+                    <=n) houses. Chef is initially at house 1. Chef decides an integer x and stops after every x houses. i.e.- if n=7 and x=2. He will stop at 1,3,5,7,2,… He may deliver a package when he stops at a house. His work is done when all the packages are delivered.
+                        What is the minimum number of times Chef has to stop, if he can choose any x? Note: Starting point (1) is also counted in number of stops. Find no. of steps for n=5, m=3, Houses: 1 2 4. (Output=3)</p>
+                        <input type="text" placeholder="Enter Your Answer" id="answer_by_user">
+                        <input type="button" id="submit" value="SUBMIT" onclick="check();">
             </div>
         </div>
 
         <div class="box1">
-            <div class="question">
-                <p><b>Q10.</b> </p>
+            <div class="question" id="10">
+                <p><b>Ques.</b> Your teacher is very evil and gives you a lot of homework. In fact, the homework she gives you takes so much time that you get barely anytime to sleep. Today, she gave an extra-long homework: The teacher has given you a list
+                    A of N distinct integers, Q queries and an integer M. Each query will have two integers, i and R. You have to find j, such that a[j] is the ith smallest element for which a[j]%M = R. For each query output one integer, j(1-indexed),
+                    which is the index such that a[j] is the ith smallest element for which a[j]%M = R. If it doesn't exist then print -1. Find output for N=8, Q=5, M=4, Array: 1 5 7 3 9 11 0 4, i and R for Q queries: 1 1, 2 1, 3 1, 1 3, 5 3. (Output=1
+                    2 5 4 -1)</p>
+                <input type="text" placeholder="Enter Your Answer" id="answer_by_user">
+                <input type="button" id="submit" value="SUBMIT" onclick="check();">
+
             </div>
         </div>
+        <script>
+            var answers = ['26', '1', ''];
+            var number = Math.floor(Math.random() * 10) + 1;
+            var ans = answers[number - 1];
+            var num = "" + number;
 
+            document.getElementById("1").style.display = 'block';
+
+            function check() {
+
+                var ans = document.getElementById("answer_by_user").value;
+
+                if (ans === answers[0]) {
+                    alert('success');
+                    document.getElementById("answer_by_user").value = "";
+                    document.getElementById("answer_by_user").disabled = true;
+
+
+                } else {
+                    alert('failed');
+                    document.getElementById("answer_by_user").value = "";
+                    document.getElementById("answer_by_user").disabled = true;
+
+                }
+            }
+        </script>
+
+        <!-- 
         <div class="box1">
             <div class="question">
                 <p><b>Q11.</b> </p>
@@ -169,7 +202,7 @@
             <div class="question">
                 <p><b>Q20.</b> </p>
             </div>
-        </div>
+        </div> -->
     </div>
 
 </body>
